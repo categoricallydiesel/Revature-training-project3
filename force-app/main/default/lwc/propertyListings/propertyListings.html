@@ -1,0 +1,110 @@
+<!--<template>
+    <div lwc-ref="container">
+        <template lwc:if={properties.data}>
+            <template for:each={properties.data} for:item="property">
+                <lightning-card key={property.Id}>
+                    <p>{property.Name}</p>
+                    <lightning-button variant="brand" data-id={property.Id} onclick={navToResidencePage} label="See More"></lightning-button>
+                </lightning-card>      
+            </template>
+        </template>
+    </div>
+</template>-->
+
+<template>
+  <div lwc-ref="container">
+    <template lwc:if={properties.data}>
+      <template for:each={properties.data} for:item="property">
+        <article class="slds-card" key={property.Id}>
+          <div class="slds-card__header slds-grid">
+            <header
+              class="slds-media slds-media_center slds-has-flexi-truncate"
+            >
+              <div class="slds-media__figure">
+                <span
+                  class="slds-icon_container slds-icon-custom-custom24"
+                  title="Rental Property"
+                >
+                  <svg class="slds-icon" aria-hidden="true">
+                    <use
+                      xlink:href="/assets/icons/custom-sprite/svg/symbols.svg#custom24"
+                    ></use>
+                  </svg>
+                  <span class="slds-assistive-text">Rental property icon</span>
+                </span>
+              </div>
+              <div class="slds-media__body">
+                <h2 class="slds-card__header-title">
+                  <a
+                    href="#"
+                    class="slds-card__header-link slds-truncate"
+                    title={property.Name}
+                  >
+                    <span>{property.Name}</span>
+                  </a>
+                </h2>
+              </div>
+              <div class="slds-no-flex">
+                <!--<button
+                  class="slds-button slds-button_neutral"
+                  data-id={property.Id}
+                  onclick={navToResidencePage}
+                  label="See More"
+                >
+                  See More
+                </button>-->
+                <lightning-button
+                  label="See More"
+                  variant="brand"
+                  data-id={property.Id}
+                  onclick={navToRentalPropertyPage}
+                ></lightning-button>
+              </div>
+            </header>
+          </div>
+          <div class="slds-card__body slds-card__body_inner">
+            <lightning-layout>
+              <lightning-layout-item padding="around-small">
+                <c-listing-image property-id={property.Id}></c-listing-image>
+              </lightning-layout-item>
+              <lightning-layout-item padding="around-small">
+                <div class="header-column">
+                  <p class="field-title" title="Address">Address</p>
+                  <p>{property.Address}</p>
+                </div>
+              </lightning-layout-item>
+              <lightning-layout-item padding="around-small">
+                <div class="header-column">
+                  <p class="field-title" title="Bedrooms">Bedrooms</p>
+                  <p>{property.Bedrooms__c}</p>
+                </div>
+              </lightning-layout-item>
+              <lightning-layout-item padding="around-small">
+                <div class="header-column">
+                  <p class="field-title" title="Bathrooms">Bathrooms</p>
+                  <p>{property.Bathrooms__c}</p>
+                </div>
+              </lightning-layout-item>
+              <lightning-layout-item padding="around-small">
+                <div class="header-column">
+                  <p class="field-title" title="Garage">Garage</p>
+                    <div class="slds-form-element">
+                      <div class="slds-form-element__control">
+                        <div class="slds-checkbox">
+                          <input type="checkbox" name="options" id="checkbox-unique-id-85" value="checkbox-unique-id-85" disabled="" checked={property.Garage__c} />
+                          <label class="slds-checkbox__label" for="checkbox-unique-id-85">
+                            <span class="slds-checkbox_faux"></span>
+                            <!--<span class="slds-form-element__label">Checkbox Label</span>-->
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+              </lightning-layout-item>
+            </lightning-layout>
+          </div>
+        </article>
+      </template>
+    </template>
+  </div>
+</template>

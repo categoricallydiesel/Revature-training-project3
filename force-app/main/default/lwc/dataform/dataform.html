@@ -1,0 +1,48 @@
+<template>
+  <lightning-card title="Schedule a Tour!" icon-name="standard:record">
+    <div class="slds-var-m-around_medium">
+      <lightning-input
+        label="First Name"
+        onchange={handleFirstNameChange}
+        class="slds-var-m-bottom_x-small"
+      ></lightning-input>
+      <lightning-input
+        label="Last Name"
+        onchange={handleLastNameChange}
+        class="slds-var-m-bottom_x-small"
+      ></lightning-input>
+      <lightning-input
+        label="Phone"
+        onchange={handlePhoneChange}
+        class="slds-var-m-bottom_x-small"
+      ></lightning-input>
+      <lightning-input
+        label="Email"
+        onchange={handleEmailChange}
+        class="slds-var-m-bottom_x-small"
+      ></lightning-input>
+      <lightning-input
+        label="Tour Information"
+        onchange={handleTourInformationChange}
+        class="slds-var-m-bottom_x-small"
+      ></lightning-input>
+      <lightning-input
+        label="Property to Tour"
+        onchange={handlePropertyToTourChange}
+        class="slds-var-m-bottom_x-small"
+      ></lightning-input>
+      <lightning-button
+        label="Create Tour"
+        variant="brand"
+        onclick={createLead}
+      ></lightning-button>
+    </div>
+  </lightning-card>
+  <template lwc:if={showConfirmation}>
+    <lightning-card title="Tour Scheduled" icon-name="utility:success">
+      <div class="slds-p-around_medium">
+        <p>Your tour has been scheduled successfully!</p>
+      </div>
+    </lightning-card>
+  </template>
+</template>

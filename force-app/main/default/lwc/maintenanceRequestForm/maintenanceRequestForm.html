@@ -1,0 +1,20 @@
+<template>
+    <template lwc:if={showForm}>
+        <lightning-card title="Submit Maintenance Request" icon-name="utility:form">
+            <div class="slds-p-around_medium">
+                <lightning-input label="Subject" value={subject} onchange={handleInputChange} data-id="subject"></lightning-input>
+                <lightning-textarea label="Description" value={description} onchange={handleInputChange} data-id="description"></lightning-textarea>
+                <lightning-combobox label="Priority" value={priority} options={priorityOptions} onchange={handleInputChange} data-id="priority"></lightning-combobox>
+                <lightning-input label="Rental Property Name" value={rentalPropertyName} disabled></lightning-input>
+                <lightning-button variant="brand" label="Submit" onclick={handleSubmit} disabled={isSubmitDisabled}></lightning-button>
+            </div>
+        </lightning-card>
+    </template>
+    <template lwc:if={showConfirmation}>
+        <lightning-card title="Request Submitted" icon-name="utility:success">
+            <div class="slds-p-around_medium">
+                <p>Your maintenance request has been submitted successfully.</p>
+            </div>
+        </lightning-card>
+    </template>
+</template>

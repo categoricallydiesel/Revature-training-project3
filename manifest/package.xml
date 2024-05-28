@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>maintenanceRequestForm</members>
+        <members>dataform</members>
+        <members>navigation</members>
+        <members>ldsUtils</members>
+        <members>caseDataTableComponent</members>
+        <members>propertyListings</members>
+        <members>listingImage</members>
+        <members>propertyDetail</members>
+        <members>monthlyStatements</members>
+        <name>LightningComponentBundle</name>
+    </types>
+    <types>
+        <members>CommunitiesLandingController</members>
+        <members>MaintenanceRequestController</members>
+        <members>CaseController</members>
+        <members>PropertyListingsController</members>
+        <members>PropertyDetailController</members>
+        <members>MaintenanceRequestController</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>StaticResource</name>
+    </types>
+    <types>
+        <members>Contact-Contact Layout</members>
+        <members>Case-Case Layout</members>
+        <members>ContentVersion-Content Version Layout</members>
+        <members>Rental_Property__c-Rental Property Layout</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>Byte_Property_Management_App</members>
+        <name>CustomApplication</name>
+    </types>
+    <types>
+        <members>Byte_Property_Management_App_UtilityBar</members>
+        <name>FlexiPage</name>
+    </types>
+    <types>
+        <members>logo</members>
+        <name>ContentAsset</name>
+    </types>
+    <types>
+        <members>Byte Property Management Portal Profile</members>
+        <members>Custom Customer Community User</members>
+        <name>Profile</name>
+    </types>
+    <types>
+        <members>Rental_Property__c.*</members>
+        <name>SharingCriteriaRule</name>
+    </types>
+    <types>
+        <members>Rental_Property__c.*</members>
+        <name>SharingOwnerRule</name>
+    </types>
+    <types>
+        <members>GrantApexAccessToCommunityUser</members>
+        <name>PermissionSet</name>
+    </types>
+    <types>
+        <members>*</members>
+        <members>Lead</members>
+        <members>Contact</members>
+        <members>Case</members>
+        <members>ContentVersion</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CustomTab</name>
+    </types>
+
+    <version>60.0</version>
+</Package>

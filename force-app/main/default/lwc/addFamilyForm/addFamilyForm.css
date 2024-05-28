@@ -1,0 +1,18 @@
+.slds-p-around_medium {
+    margin: 20px;
+}
+
+.lightning-input, .lightning-textarea, .lightning-combobox, .lightning-button {
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.lightning-card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+}
+
+.lightning-button {
+    display: block;
+    margin-top: 1rem;
+}

@@ -1,0 +1,19 @@
+<template>
+    <template lwc:if={showForm}>
+        <lightning-card title="Submit Maintenance Request" icon-name="utility:form">
+            <div class="slds-p-around_medium">
+                <lightning-input label="First Name" value={firstName} onchange={handleInputChange} data-id="firstName"></lightning-input>
+                <lightning-input label="Last Name" value={lastName} onchange={handleInputChange} data-id="lastName"></lightning-input>
+                <lightning-input label="Email" value={emailId} onchange={handleInputChange} data-id="emailId"></lightning-input>
+                <lightning-input label="Phone Number" value={phoneVal} onchange={handleSubmit} data-id="phoneVal"></lightning-input>
+            </div>
+        </lightning-card>
+    </template>
+    <template lwc:if={showConfirmation}>
+        <lightning-card title="Request Submitted" icon-name="utility:success">
+            <div class="slds-p-around_medium">
+                <p>Your maintenance r equest has beensubmitted successfully.</p>
+            </div>
+        </lightning-card>
+    </template>
+</template>
