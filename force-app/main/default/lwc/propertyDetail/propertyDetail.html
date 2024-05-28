@@ -1,0 +1,49 @@
+<template>
+    <template lwc:if={recordId}>
+        <lightning-card title="Rental Property Detail" icon-name="custom:custom24">
+            <lightning-record-view-form
+            object-api-name={objectApiName}
+            record-id={recordId}
+            >
+                <div class="slds-grid slds-wrap slds-box">
+                    <div class="slds-col slds-size_1-of-2">                    
+                        <lightning-output-field field-name={name}> </lightning-output-field>
+                        <lightning-output-field field-name={address}> </lightning-output-field>
+                        <lightning-output-field field-name={monthlyRent}> </lightning-output-field>
+                        <lightning-output-field field-name={description}> </lightning-output-field>
+                    </div>
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning-output-field field-name={squareFootage}> </lightning-output-field>
+                        <lightning-output-field field-name={bedrooms}> </lightning-output-field>
+                        <lightning-output-field field-name={bathrooms}> </lightning-output-field>                                                
+                        <lightning-output-field field-name={garage}> </lightning-output-field>
+                        <lightning-output-field field-name={petsAllowed}> </lightning-output-field>
+                    </div>
+                </div>
+            </lightning-record-view-form>
+            <template lwc:if={imgUrlList}>
+                <div class="slds-size_4-of-4 slds-align_absolute-center slds-var-m-around_x-small my-radius">
+                    <lightning-carousel disable-auto-scroll>
+                        <template for:each={imgUrlList} for:item="img">
+                                <lightning-carousel-image key={img.Id} src={img.VersionDataUrl} header="test"></lightning-carousel-image>
+                        </template>
+                    </lightning-carousel>
+                </div>
+                <div class="slds-align_absolute-center">
+                    <lightning-button class="slds-var-m-around_x-small"
+                        label="Tour"
+                        variant="brand"
+                        onclick={handleScheduleTour}
+                    ></lightning-button>
+                    <lightning-button 
+                        label="Rent"
+                        variant="brand"
+                    ></lightning-button>
+                </div>
+            </template>
+            <template lwc:if={scheduleTour}>
+                <c-dataform></c-dataform>
+            </template>
+        </lightning-card>
+    </template>
+</template>

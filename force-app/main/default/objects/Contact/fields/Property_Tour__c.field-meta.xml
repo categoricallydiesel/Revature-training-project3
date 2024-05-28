@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Property_Tour__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Rental property the contact wants to tour!</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Choose a property to tour!</inlineHelpText>
+    <label>Property Tour</label>
+    <referenceTo>Rental_Property__c</referenceTo>
+    <relationshipLabel>Contacts (Property Tour)</relationshipLabel>
+    <relationshipName>Contacts1</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Lookup</type>
+</CustomField>

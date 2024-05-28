@@ -1,0 +1,19 @@
+<template>
+  <header class="header">
+    <div class="logo">
+      <a href="#" onclick={navigateToHome}>
+        <img src={logoUrl} alt="Logo" />
+      </a>
+    </div>
+    <nav class="nav-links">
+      <a href="#" onclick={navigateToHome}>Home</a>
+      <template lwc:if={isGuest}>
+        <a href="#" onclick={navigateToSignUp}>Sign Up</a>
+        <a href="#" onclick={navigateToLogin}>Login</a>
+      </template>
+      <template lwc:if={isLoggedIn}>
+        <a href="#" onclick={handleLogout}>Logout</a>
+      </template>
+    </nav>
+  </header>
+</template>
